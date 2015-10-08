@@ -1,0 +1,31 @@
+#sidebar-wrapper
+  %ul.sidebar-nav
+    %li.sidebar-brand
+      %a{:href => "/"}
+        %h1 FeedBooster
+    %li
+      %a{:href => "/"}
+        %i.fa.fa-home
+        Dashboard
+    %li
+      %a{:href => "/settings"}
+        %i.fa.fa-cogs
+        Settings
+    %li
+      = link_to destroy_user_session_path do
+        %i.fa.fa-sign-out
+        Logout
+    %li
+      %hr/
+    %li
+      %a{:href => "/"}
+        %i.fa.fa-rss
+        Feed 1
+    %li
+      = link_to new_user_session_path do
+        %i.fa.fa-sign-in
+        Login
+    %li
+      = link_to new_user_registration_path do
+        %i.fa.fa-user-plus
+        Signup

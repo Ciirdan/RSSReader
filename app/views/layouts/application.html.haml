@@ -1,0 +1,12 @@
+!!!
+%html
+  %head
+    = javascript_include_tag 'application.js'
+    = stylesheet_link_tag 'application.css'
+    = csrf_meta_tags
+  %body
+    .wrapper
+      = render :partial => 'shared/sidebar'
+      #page-content-wrapper
+        .container
+          = yield
