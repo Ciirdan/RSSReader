@@ -1,16 +1,14 @@
 class FeedsController < ApplicationController
   before_action :authenticate_user!, :only => [:new, :create, :edit, :update, :destroy]
+  before_action :load_feeds
 
   def index
-    if user_signed_in?
-      @feeds = current_user.feeds
-    else
-      @feeds = Feed.all
-    end
+    @posts = Post.where(feed_id: @feeds.ids).order(:published_at).page(params[:page])
   end
 
   def show
     @feed = Feed.find(params[:id])
+    @feed.refresh
   end
 
   def new
@@ -57,4 +55,13 @@ class FeedsController < ApplicationController
     params.require(:feed).permit(:url)
   end
 
+  private
+
+  def load_feeds
+    if user_signed_in?
+      @feeds = current_user.feeds
+    else
+      @feeds = Feed.all
+    end
+  end
 end

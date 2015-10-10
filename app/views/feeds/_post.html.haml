@@ -1,0 +1,15 @@
+.col-lg-12.article
+
+  .btn-group.articleButton
+    %button.btn.btn-default{:type => 'button'}
+      %i.fa.fa-star
+    %button.btn.btn-primary{:type => 'button'}= '{Read State}'
+
+  %h2.articleTitle
+    = link_to post.title, post.url, :target => :_blank, :rel => :nofollow
+  %h6.articleDetails
+    = link_to post.feed.title, post.feed.site_url, :target => :_blank, :rel => :nofollow
+    = "the #{post.published_at.strftime("%d/%m/%Y")} at #{post.published_at.strftime("%H:%M")}"
+
+  .articleContent
+    != post.content

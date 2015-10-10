@@ -24,11 +24,14 @@
         = link_to new_feed_path do
           %i.fa.fa-plus
           = 'Add Feed'
+
       -# Render list of feeds
-      %li
-        %a{:href => "/"}
-          %i.fa.fa-rss
-          Feed 1
+      - if @feeds.any?
+        - @feeds.each do |feed|
+          %li
+            = link_to feed_path(feed) do
+              %i.fa.fa-rss
+              = feed.title
 
     - if not user_signed_in?
       %li

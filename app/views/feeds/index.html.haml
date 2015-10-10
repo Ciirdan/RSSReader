@@ -2,4 +2,5 @@
 -# include ./partials/mobilemenu.ejs
 #articleContainer.row
   / News
-  = render :partial => 'feed', :collection => @feeds
+  = render :partial => 'post', :collection => @posts
+  = paginate @posts

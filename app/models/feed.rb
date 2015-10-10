@@ -1,6 +1,4 @@
 class Feed < ActiveRecord::Base
-  after_create :touch_refreshed_at
-
   has_many :user_feeds, :dependent => :destroy
   has_many :users, :through => :user_feeds
   has_many :posts
@@ -9,7 +7,7 @@ class Feed < ActiveRecord::Base
 
 
   def refresh
-    if DateTime.now.to_i - self.refreshed_at.to_i >= 1.minutes.to_i
+    if self.refreshed_at.nil? or  DateTime.now.to_i - self.refreshed_at.to_i >= 1.minutes.to_i
       posts = Feedjira::Feed.fetch_and_parse(self.url).entries
 
       posts.each do |post|
