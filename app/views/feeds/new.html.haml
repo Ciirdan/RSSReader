@@ -1,2 +1,2 @@
-= simple_form_for @feed do |f|
+= simple_form_for @feed, :url => feeds_path do |f|
   = render :partial => 'form', :locals => {:f => f}

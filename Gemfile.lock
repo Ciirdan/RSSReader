@@ -1,5 +1,5 @@
 GEM
-  remote: http://rubygems.org/
+  remote: https://rubygems.org/
   specs:
     actionmailer (4.2.3)
       actionpack (= 4.2.3)
@@ -37,15 +37,24 @@ GEM
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
     arel (6.0.3)
+    autoprefixer-rails (6.0.3)
+      execjs
+      json
     bcrypt (3.1.10-x86-mingw32)
     better_errors (2.1.1)
       coderay (>= 1.0.0)
       erubis (>= 2.6.6)
       rack (>= 0.9.0)
+    binding_of_caller (0.7.2)
+      debug_inspector (>= 0.0.1)
+    bootstrap-sass (3.3.5.1)
+      autoprefixer-rails (>= 5.0.0.1)
+      sass (>= 3.3.0)
     builder (3.2.2)
     chronic (0.10.2)
     coderay (1.1.0)
     daemons (1.2.3)
+    debug_inspector (0.0.2)
     devise (3.5.2)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
@@ -71,6 +80,8 @@ GEM
       faraday_middleware (~> 0.9)
       loofah (~> 2.0)
       sax-machine (~> 1.0)
+    font-awesome-sass (4.4.0)
+      sass (>= 3.2)
     globalid (0.3.6)
       activesupport (>= 4.1.0)
     haml (4.0.7)
@@ -183,11 +194,6 @@ GEM
     thor (0.19.1)
     thread_safe (0.3.5)
     tilt (2.0.1)
-    twitter-bootstrap-rails (3.2.0)
-      actionpack (~> 4.1)
-      execjs (~> 2.2)
-      rails (~> 4.1)
-      railties (~> 4.1)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
     tzinfo-data (1.2015.7)
@@ -205,9 +211,12 @@ PLATFORMS
 
 DEPENDENCIES
   better_errors
+  binding_of_caller
+  bootstrap-sass
   devise
   factory_girl_rails
   feedjira
+  font-awesome-sass
   haml
   haml-rails
   jquery-rails
@@ -219,7 +228,9 @@ DEPENDENCIES
   simple_form
   sqlite3
   thin
-  twitter-bootstrap-rails
   tzinfo-data
   uglifier (>= 1.3.0)
   whenever
+
+BUNDLED WITH
+   1.10.6

@@ -1,4 +1,4 @@
-source 'http://rubygems.org'
+source 'https://rubygems.org'
 
 # Rails
 gem 'rails', '4.2.3'
@@ -17,7 +17,8 @@ gem 'sqlite3'
 gem 'sass-rails'
 gem 'uglifier', '>= 1.3.0'
 gem 'jquery-rails'
-gem 'twitter-bootstrap-rails'
+gem 'bootstrap-sass'
+gem 'font-awesome-sass'
 
 # Views
 gem 'haml'
@@ -26,6 +27,7 @@ gem 'simple_form'
 
 group :development, :test do
   gem 'better_errors'
+  gem 'binding_of_caller'
   gem 'quiet_assets'
 end
 

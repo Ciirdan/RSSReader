@@ -5,6 +5,7 @@ class User < ActiveRecord::Base
 
   attr_accessor :login
 
+  has_many :user_feeds, :dependent => :destroy
   has_many :feeds, :through => :user_feeds
   has_many :posts, :through => :feeds
 

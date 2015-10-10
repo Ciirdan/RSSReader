@@ -2,7 +2,9 @@ Rails.application.routes.draw do
 
   devise_for :users
 
+  resources :dashboard
+  resources :feeds
 
-  root to: 'dashboard#index'
+  root to: 'feeds#index'
 
 end
