@@ -9,4 +9,7 @@
       = render :partial => 'shared/sidebar'
       #page-content-wrapper
         .container
+          / Mobile Menu Include
+          -# include ./partials/mobilemenu.ejs
+          = render :partial => 'shared/bootstrap_flash', flash: flash
           = yield

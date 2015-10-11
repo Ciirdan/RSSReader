@@ -7,7 +7,7 @@ class Feed < ActiveRecord::Base
 
 
   def refresh
-    if self.refreshed_at.nil? or  DateTime.now.to_i - self.refreshed_at.to_i >= 1.minutes.to_i
+    if self.refreshed_at.nil? or  DateTime.now.to_i - self.refreshed_at.to_i >= 15.minutes.to_i
       posts = Feedjira::Feed.fetch_and_parse(self.url).entries
 
       posts.each do |post|

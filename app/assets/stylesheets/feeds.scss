@@ -27,3 +27,26 @@
 .articleContent{
 
 }
+
+.favorite[data-status="true"]{
+  color: white;
+  background-color: #FFDC00;
+}
+.favorite[data-status="false"]:hover{
+  color: white;
+  background-color: #FFDC00;
+}
+
+.read[data-status="true"]:before{
+  content: 'Read';
+}
+.read[data-status="true"]:hover:before{
+  content: 'Not Read';
+}
+
+.read[data-status="false"]:before{
+  content: 'Not Read';
+}
+.read[data-status="false"]:hover:before{
+  content: 'Read';
+}

@@ -7,7 +7,8 @@ class User < ActiveRecord::Base
 
   has_many :user_feeds, :dependent => :destroy
   has_many :feeds, :through => :user_feeds
-  has_many :posts, :through => :feeds
+
+  has_many :user_posts
 
 
   validates :username, :presence => true, :uniqueness => {:case_sensitive => false}

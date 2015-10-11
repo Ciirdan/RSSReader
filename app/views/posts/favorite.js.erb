@@ -1,0 +1,2 @@
+var $favoriteLink = $('.favorite[data-favorite="<%= @post.id.to_s %>"]');
+$favoriteLink.attr('data-status', '<%= @user_post.favorited.to_s %>');

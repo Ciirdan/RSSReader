@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151010135422) do
+ActiveRecord::Schema.define(version: 20151010223348) do
 
   create_table "feeds", force: :cascade do |t|
     t.string   "title"
@@ -28,10 +28,9 @@ ActiveRecord::Schema.define(version: 20151010135422) do
     t.text     "content"
     t.datetime "published_at"
     t.string   "url"
-    t.boolean  "status",       default: false, null: false
     t.integer  "feed_id"
-    t.datetime "created_at",                   null: false
-    t.datetime "updated_at",                   null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
   end
 
   add_index "posts", ["feed_id"], name: "index_posts_on_feed_id"
@@ -45,6 +44,18 @@ ActiveRecord::Schema.define(version: 20151010135422) do
 
   add_index "user_feeds", ["feed_id"], name: "index_user_feeds_on_feed_id"
   add_index "user_feeds", ["user_id"], name: "index_user_feeds_on_user_id"
+
+  create_table "user_posts", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "post_id"
+    t.boolean  "favorited",  default: false, null: false
+    t.boolean  "read",       default: false, null: false
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
+  end
+
+  add_index "user_posts", ["post_id"], name: "index_user_posts_on_post_id"
+  add_index "user_posts", ["user_id"], name: "index_user_posts_on_user_id"
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false

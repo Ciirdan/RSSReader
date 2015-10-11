@@ -1,0 +1,2 @@
+var $readLink = $('.read[data-read="<%= @post.id.to_s %>"]');
+$readLink.attr('data-status', '<%= @user_post.read.to_s %>');

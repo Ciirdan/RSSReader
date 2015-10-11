@@ -5,7 +5,7 @@ class CreatePosts < ActiveRecord::Migration
       t.text :content
       t.datetime :published_at
       t.string :url
-      t.boolean :status, :null => false,:default => 0
+      t.boolean :status, :null => false, :default => 0
       t.references :feed, index: true, foreign_key: true
 
       t.timestamps null: false
