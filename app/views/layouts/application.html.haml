@@ -5,10 +5,11 @@
     = stylesheet_link_tag 'application.css'
     = csrf_meta_tags
   %body
-    .wrapper
-      = render :partial => 'shared/sidebar'
+    #wrapper
+      #sidebar-wrapper
+        = render :partial => 'shared/sidebar'
       #page-content-wrapper
-        .container
+        .container-fluid
           / Mobile Menu Include
           -# include ./partials/mobilemenu.ejs
           = render :partial => 'shared/bootstrap_flash', flash: flash

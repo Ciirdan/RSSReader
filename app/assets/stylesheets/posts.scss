@@ -1,3 +1,56 @@
-// Place all the styles related to the posts controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+#articleContainer{
+  //margin-left: initial !important;
+}
+.article{
+  background-color: #EEEEEE;
+  border-radius: 3px;
+  margin-bottom: 5px;
+  padding-bottom: 15px;
+}
+.articleButton{
+  float: right;
+  padding-top: 15px;
+
+  /* Button Favorite */
+  .favorite{
+    &[data-status="true"]{
+      color: white;
+      background-color: #FFDC00;
+    }
+    &[data-status="false"]:hover{
+      color: white;
+      background-color: #FFDC00;
+    }
+  }
+  /* Button Read */
+  .read{
+    width: 86px;
+    /* Is Read */
+    &[data-status="true"]{
+      &:before{
+        content: 'Read';
+      }
+      &:hover:before{
+        content: 'Not Read';
+      }
+    }
+    /* Is Not Read */
+    &[data-status="false"]{
+      &:before{
+        content: 'Not Read';
+      }
+      &:hover:before{
+        content: 'Read';
+      }
+    }
+  }
+}
+.articleTitle{
+
+}
+.articleDetails{
+
+}
+.articleContent{
+
+}

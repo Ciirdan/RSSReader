@@ -1,44 +1,43 @@
-#sidebar-wrapper
-  %ul.sidebar-nav
-    %li.sidebar-brand
-      %a{:href => "/"}
-        %h1= 'FeedBooster'
+%ul.sidebar-nav
+  %li.sidebar-brand
+    %a{:href => "/"}
+      %h1= 'FeedBooster'
+  %li
+    %a{:href => "/"}
+      %i.fa.fa-home
+      = 'Dashboard'
+  %li
+    %a{:href => "/settings"}
+      %i.fa.fa-cogs
+      Settings
+  - if user_signed_in?
     %li
-      %a{:href => "/"}
-        %i.fa.fa-home
-        = 'Dashboard'
+      = link_to destroy_user_session_path, :method => :DELETE do
+        %i.fa.fa-sign-out
+        = 'Logout'
+  %li
+    %hr/
+
+  - if user_signed_in?
     %li
-      %a{:href => "/settings"}
-        %i.fa.fa-cogs
-        Settings
-    - if user_signed_in?
-      %li
-        = link_to destroy_user_session_path, :method => :DELETE do
-          %i.fa.fa-sign-out
-          = 'Logout'
+      = link_to new_feed_path do
+        %i.fa.fa-plus
+        = 'Add Feed'
+
+    -# Render list of feeds
+    - if @feeds.any?
+      - @feeds.each do |feed|
+        %li
+          = link_to feed_path(feed) do
+            %i.fa.fa-rss
+            = feed.title
+
+  - if not user_signed_in?
     %li
-      %hr/
-
-    - if user_signed_in?
-      %li
-        = link_to new_feed_path do
-          %i.fa.fa-plus
-          = 'Add Feed'
-
-      -# Render list of feeds
-      - if @feeds.any?
-        - @feeds.each do |feed|
-          %li
-            = link_to feed_path(feed) do
-              %i.fa.fa-rss
-              = feed.title
-
-    - if not user_signed_in?
-      %li
-        = link_to new_user_session_path do
-          %i.fa.fa-sign-in
-          = 'Login'
-      %li
-        = link_to new_user_registration_path do
-          %i.fa.fa-user-plus
-          = 'Signup'
+      = link_to new_user_session_path do
+        %i.fa.fa-sign-in
+        = 'Login'
+    %li
+      = link_to new_user_registration_path do
+        %i.fa.fa-user-plus
+        = 'Signup'
