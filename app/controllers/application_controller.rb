@@ -25,4 +25,14 @@ class ApplicationController < ActionController::Base
   def authenticate_user!
     super
   end
+
+  def load_feeds
+    if user_signed_in?
+      @feeds = current_user.feeds
+    else
+      # TODO: Limit for not signed users
+      @feeds = Feed.all
+    end
+  end
+
 end

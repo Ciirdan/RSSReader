@@ -1,3 +1,26 @@
-.row{:id => 'articleContainer indexFeed'}
+-#.row{:id => 'articleContainer indexFeed'}
   = render :partial => 'post', :collection => @posts
   = paginate @posts
+.row
+  = simple_form_for @feed, :wrapper => :horizontal_form do |f|
+    %h3= 'Add a Feed:'
+    = f.input :url, :placeholder => 'http://'
+    = f.submit :class => 'btn btn-primary'
+
+  .table-responsive
+    %table.table.table-striped.table-bordered
+      %thead
+        %th= 'Nom'
+        %th= 'URL'
+        %th= 'Actions'
+      %tbody
+        - if @feeds.any?
+          - @feeds.each do |feed|
+            %tr
+              %td= feed.title
+              %td= feed.url
+              %td
+                %button
+                  .fa.fa-save
+                %button
+                  .fa.fa-trash

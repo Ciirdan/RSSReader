@@ -1,16 +1,24 @@
 %ul.sidebar-nav
   %li.sidebar-brand
-    %a{:href => "/"}
+    %a{:href => '/'}
       %h1= 'FeedBooster'
   %li
-    %a{:href => "/"}
+    %a{:href => '/'}
       %i.fa.fa-home
       = 'Dashboard'
   %li
-    %a{:href => "/settings"}
+    %a{:href => "/feeds"}
       %i.fa.fa-cogs
-      Settings
+      = 'Feeds'
   - if user_signed_in?
+    %li
+      = link_to settings_path do
+        %i.fa.fa-cogs
+        = 'Settings'
+    %li
+      = link_to refresh_feeds_path do
+        %i.fa.fa-refresh
+        = 'Refresh'
     %li
       = link_to destroy_user_session_path, :method => :DELETE do
         %i.fa.fa-sign-out

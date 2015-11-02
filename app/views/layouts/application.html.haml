@@ -1,6 +1,7 @@
 !!!
 %html
   %head
+    %title= "FeedBooster"
     = javascript_include_tag 'application.js'
     = stylesheet_link_tag 'application.css'
     = csrf_meta_tags
@@ -10,7 +11,5 @@
         = render :partial => 'shared/sidebar'
       #page-content-wrapper
         .container-fluid
-          / Mobile Menu Include
-          -# include ./partials/mobilemenu.ejs
           = render :partial => 'shared/bootstrap_flash', flash: flash
           = yield

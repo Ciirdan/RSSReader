@@ -1,0 +1,19 @@
+.col-md-12.article
+
+  - if user_signed_in?
+    / Buttons
+    .btn-group.articleButton
+      /Favorite
+      = link_to post_favorite_path(:post_id => post.id), :remote => true, :method => :POST, :class => 'btn btn-default favorite', "data-status" => post.is_favorited?(current_user), "data-favorite" => post.id.to_s do
+        %i.fa.fa-star
+      / Read
+      = link_to '', post_read_path(:post_id => post.id), :remote => true, :method => :POST, :class => 'btn btn-primary read', "data-status" => post.is_read?(current_user), "data-read" => post.id.to_s
+
+  %h2.articleTitle
+    = link_to post.title, post.url, :target => :_blank, :rel => :nofollow
+  %h6.articleDetails
+    = link_to post.feed.title, post.feed.site_url, :target => :_blank, :rel => :nofollow
+    = "the #{post.published_at.strftime("%d/%m/%Y")} at #{post.published_at.strftime("%H:%M")}"
+
+  .articleContent
+    != post.content

@@ -1,5 +1,3 @@
-/ Mobile Menu Include
--# include ./partials/mobilemenu.ejs
-#articleContainer.row
-  / News
-  = render :partial => 'feed', :collection => @feeds
+.row{:id => 'articleContainer indexFeed'}
+  = render :partial => 'post', :collection => @posts
+  .text-center= paginate @posts

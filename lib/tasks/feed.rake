@@ -3,7 +3,7 @@ namespace :feed do
     @feeds = Feed.all
 
     @feeds.each do |feed|
-      feed
+      feed.refresh
     end
   end
 end

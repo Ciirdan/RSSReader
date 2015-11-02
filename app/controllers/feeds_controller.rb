@@ -4,17 +4,9 @@ class FeedsController < ApplicationController
   before_action :load_feeds
   before_action :find_feed, :only => [:show, :edit, :update, :destroy]
 
-  # TODO: Move to Dashboard & Change to a list of feeds
   def index
     if user_signed_in?
-      # Find posts read by the user
-      @user_posts = UserPost.where(user_id: current_user.id, read: true).select(:post_id)
-      # Find all post in feeds of the user
-      @posts = Post.where(feed_id: @feeds.ids)
-      # Remove the posts read
-      @posts = @posts.where.not(id: @user_posts).order(:published_at => :desc).page(params[:page])
-    else
-      @posts = Post.where(feed_id: @feeds.id).order(:published_at => :desc).page(params[:page])
+      @feed = Feed.new
     end
   end
 
@@ -58,7 +50,7 @@ class FeedsController < ApplicationController
     # If feed exist
     else
       # Don't add a feed twice to a user
-      if not current_user.feeds.include?(@feed)
+      if not @feeds.include?(@feed)
         current_user.feeds << @feed
         flash[:success] = 'Feed added'
       else
@@ -71,6 +63,7 @@ class FeedsController < ApplicationController
 
   # TODO: Create edit/update/destroy
   def edit
+
   end
 
   def update
@@ -78,9 +71,20 @@ class FeedsController < ApplicationController
   end
 
   def destroy
+    user_feed = UserFeed.find_by(user_id: current_user.id, feed_id: @feed.id)
 
+    unless user_feed.blank?
+      user_feed.destroy
+    end
   end
 
+  def refresh
+    @feeds.each do |feed|
+      feed.refresh
+    end
+
+    redirect_to feeds_path
+  end
 
 
   private
@@ -93,15 +97,6 @@ class FeedsController < ApplicationController
 
   def find_feed
     @feed = Feed.find(params[:id])
-  end
-
-  def load_feeds
-    if user_signed_in?
-      @feeds = current_user.feeds
-    else
-      # TODO: Limit for not signed users
-      @feeds = Feed.all
-    end
   end
 
   def uri?(string)
