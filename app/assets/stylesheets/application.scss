@@ -16,9 +16,13 @@
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
 @import "font-awesome-sprockets";
 @import "font-awesome";
+
 @import "theme/simple-sidebar";
+@import "plugins/nanoscroller";
+
 @import "dashboard";
 @import "feeds";
 @import "posts";

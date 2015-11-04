@@ -9,6 +9,8 @@ gem 'devise'
 gem 'kaminari'
 gem 'feedjira'
 gem 'whenever'
+gem 'opml_saw', :git => "git://github.com/feedbin/opml_saw.git", :branch => "master"
+gem 'ransack'
 
 # DB
 gem 'sqlite3'

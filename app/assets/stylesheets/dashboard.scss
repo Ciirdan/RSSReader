@@ -6,6 +6,16 @@
   border-radius: 3px!important;
 }
 
+#sidebar-wrapper{
+  overflow-x: hidden;
+}
 #page-content-wrapper{
 
+}
+
+ul.sidebar-nav{
+  li a{
+    white-space: nowrap;
+    overflow: hidden;
+  }
 }

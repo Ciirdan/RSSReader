@@ -14,6 +14,15 @@ class User < ActiveRecord::Base
   validates :username, :presence => true, :uniqueness => {:case_sensitive => false}
   validate :validate_username
 
+  def not_read_posts(feeds)
+    # Find posts read by the user
+    user_posts = UserPost.where(user_id: self.id, read: true).select(:post_id)
+    # Find all post in feeds of the user & Remove the posts already read
+    posts = Post.where(feed_id: feeds.ids)
+    posts = posts.where.not(id: user_posts)
+
+    return posts
+  end
 
   def validate_username
     if User.where(email: username).exists?

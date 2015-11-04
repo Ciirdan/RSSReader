@@ -1,5 +1,11 @@
 %row
-  = simple_form_for @feed, :wrapper => :horizontal_form do |f|
-    %h3= 'Add a Feed:'
-    = f.input :url, :placeholder => 'http://'
+  = simple_form_for @user, :url => settings_path, :method => 'PATCH' do |f|
+    %h3= 'Settings:'
+    = f.input :per_page
+
+    = f.input :email
+
+    = f.input :password
+    = f.input :password_confirmation
+
     = f.submit :class => 'btn btn-primary'

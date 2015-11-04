@@ -1,6 +1,7 @@
 var $readLink = $('.read[data-read="<%= @post.id.to_s %>"]');
 $readLink.attr('data-status', '<%= @user_post.read.to_s %>');
-
+console.log($readLink);
+console.log($readLink.closest('#indexFeed'));
 /* Hide Article if we are in the Dashboard(Index) but not in Show */
 if($readLink.closest('#indexFeed').length > 0){
     $readLink.closest('.article').hide();

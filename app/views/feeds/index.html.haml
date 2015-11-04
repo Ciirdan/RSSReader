@@ -4,8 +4,11 @@
 .row
   = simple_form_for @feed, :wrapper => :horizontal_form do |f|
     %h3= 'Add a Feed:'
-    = f.input :url, :placeholder => 'http://'
-    = f.submit :class => 'btn btn-primary'
+    .form-group
+      .col-md-10
+        = f.input :url, :placeholder => 'http://'
+      .col-md-2
+      = f.submit :class => 'btn btn-primary'
 
   .table-responsive
     %table.table.table-striped.table-bordered
@@ -20,7 +23,8 @@
               %td= feed.title
               %td= feed.url
               %td
-                %button
+                -#%button
                   .fa.fa-save
-                %button
-                  .fa.fa-trash
+                = link_to feed_path(feed.id), :method => :DELETE do
+                  %button
+                    .fa.fa-trash

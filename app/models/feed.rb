@@ -1,7 +1,7 @@
 class Feed < ActiveRecord::Base
   has_many :user_feeds, :dependent => :destroy
   has_many :users, :through => :user_feeds
-  has_many :posts
+  has_many :posts, :dependent => :destroy
 
   validates :url, :presence => true
 

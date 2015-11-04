@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<opml version="2.0">
+  <head>
+    <title>Leed export</title>
+    <ownerName>Leed</ownerName>
+    <ownerEmail>idleman@idleman.fr</ownerEmail>
+    <dateCreated>Tue, 03 Nov 2015 16:15:56 +0100</dateCreated>
+  </head>
+  <body>
+      <outline type="rss" xmlUrl="http://blog.hkoncept.net/feed/atom" htmlUrl="http://www.hkoncept.net/" text="A piece of my own" title="A piece of my own" description="Mr _Hk_ : Tasty game cooker, Introspective image designer, Melomaniac eclectic &amp; Smart pixel generator"/>
+      <outline type="rss" xmlUrl="http://geoaday.tumblr.com/rss" htmlUrl="http://geoaday.com/" text="GEO A DAY" title="GEO A DAY" description=""/>
+      <outline type="rss" xmlUrl="http://feeds.feedburner.com/graymatterwow" htmlUrl="http://graymatterwow.blogspot.com/" text="Gray Matter" title="Gray Matter" description="World of Warcraft Blog"/>
+      <outline type="rss" xmlUrl="http://www.hkoncept.net/feed" htmlUrl="http://www.hkoncept.net/" text="Hkoncept" title="Hkoncept" description="Mr _Hk_ : Tasty game cooker, Introspective image designer, Melomaniac eclectic &amp; Smart pixel generator"/>
+      <outline type="rss" xmlUrl="http://blog.humblebundle.com/rss" htmlUrl="http://blog.humblebundle.com/" text="Humble Mumble" title="Humble Mumble" description="Welcome to the blog of the Humble Bundle. We sell bundles of cross-platform, DRM-free video games by independent developers. You get to set your own price while supporting the Electronic Frontier Foundation, Child’s Play Charity, and independent game…"/>
+      <outline type="rss" xmlUrl="http://stravingo.over-blog.fr/rss-articles.xml" htmlUrl="http://stravingo.over-blog.fr/" text="Le blog de Stravingo" title="Le blog de Stravingo" description="Les aventures colorisées et pixelisées de Stravingo."/>
+      <outline type="rss" xmlUrl="http://legrandvrac.blogspot.com/feeds/posts/default" htmlUrl="http://legrandvrac.blogspot.com/" text="Le grand Vrac !" title="Le grand Vrac !" description=""/>
+      <outline type="rss" xmlUrl="http://www.reddit.com/user/Gambatte/submitted.rss" htmlUrl="http://www.reddit.com/" text="submitted by Gambatte" title="submitted by Gambatte" description=""/>
+      <outline type="rss" xmlUrl="http://www.hackerfactor.com/blog/index.php?/feeds/index.rss2" htmlUrl="http://www.hackerfactor.com/blog/" text="The Hacker Factor Blog" title="The Hacker Factor Blog" description="Tools, Techniques, and Tangents"/>
+      <outline type="rss" xmlUrl="http://notch.tumblr.com/rss" htmlUrl="http://notch.tumblr.com/" text="The Word of Notch" title="The Word of Notch" description="Rarely updated rambling, ranting, and informing."/>
+
+      <outline type="rss" xmlUrl="http://abstrusegoose.com/feed.xml" htmlUrl="http://abstrusegoose.com/" text="Abstruse Goose" title="Abstruse Goose" description="awesome webcomic"/>
+      <outline type="rss" xmlUrl="http://feeds.feedburner.com/AvasDemon" htmlUrl="http://www.avasdemon.com/" text="Ava's Demon" title="Ava's Demon" description="Ava's Demon is a science fiction webcomic about a girl named Ava and the demon haunting her."/>
+      <outline type="rss" xmlUrl="http://www.rsspect.com/rss/buttercupfestival.xml" htmlUrl="http://www.buttercupfestival.com/" text="Buttercup Festival" title="Buttercup Festival" description="The latest Buttercup Festival comic and news."/>
+      <outline type="rss" xmlUrl="http://feeds.feedburner.com/Buttersafe" htmlUrl="http://buttersafe.com/" text="Buttersafe" title="Buttersafe" description="Updated Tuesdays and Thursdays"/>
+      <outline type="rss" xmlUrl="http://www.commitstrip.com/en/feed/" htmlUrl="http://www.commitstrip.com/" text="CommitStrip - Blog relating the daily life of web agencies developers" title="CommitStrip - Blog relating the daily life of web agencies developers" description="The blog relating the daily life of web agency developers"/>
+      <outline type="rss" xmlUrl="http://feed.dilbert.com/dilbert/daily_strip" htmlUrl="http://dilbert.com/" text="Dilbert Daily Strip" title="Dilbert Daily Strip" description=""/>
+      <outline type="rss" xmlUrl="http://feeds.feedburner.com/Explosm" htmlUrl="http://www.explosm.net/rss.php" text="Explosm.net" title="Explosm.net" description="Flash Animations, Daily Comics and more!"/>
+      <outline type="rss" xmlUrl="http://extrafabulouscomics.com/feed/" htmlUrl="http://extrafabulouscomics.com/" text="Extra Fabulous Comics" title="Extra Fabulous Comics" description=""/>
+      <outline type="rss" xmlUrl="http://envyrayusa.tumblr.com/rss" htmlUrl="http://envyrayusa.tumblr.com/" text="Ms. Nuclear fusion" title="Ms. Nuclear fusion" description="Kano’s Art Blog  ◭◭◭"/>
+      <outline type="rss" xmlUrl="http://oglaf.com/feeds/rss/" htmlUrl="http://oglaf.com/latest/" text="Oglaf! -- Comics. Often dirty." title="Oglaf! -- Comics. Often dirty." description="Comics. Often dirty. Updates Sundays."/>
+      <outline type="rss" xmlUrl="http://pusheen.com/rss" htmlUrl="http://www.pusheen.com/" text="Pusheen the cat" title="Pusheen the cat" description="=＾● ⋏ ●＾= Meow! I am Pusheen the cat. This is my blog.(more…)"/>
+      <outline type="rss" xmlUrl="http://feeds.feedburner.com/oatmealfeed?format=xml" htmlUrl="http://theoatmeal.com/" text="The Oatmeal - Comics, Quizzes, &amp; Stories" title="The Oatmeal - Comics, Quizzes, &amp; Stories" description="The oatmeal tastes better than stale skittles found under the couch cushions"/>
+      <outline type="rss" xmlUrl="http://www.threewordphrase.com/rss.xml" htmlUrl="http://www.threewordphrase.com/" text="Three Word Phrase" title="Three Word Phrase" description="A Comic"/>
+      <outline type="rss" xmlUrl="http://what-if.xkcd.com/feed.atom" htmlUrl="" text="What If?" title="What If?" description="Answering your hypothetical questions with physics, every Tuesday."/>
+      <outline type="rss" xmlUrl="http://www.worldofmakles.com/dotclear/index.php/feed/rss2" htmlUrl="http://www.worldofmakles.com/dotclear/index.php/" text="World Of Makles" title="World Of Makles" description="Élégance des idées, raffinement du propos, sophistication du boulgour : c'est la Makles Touch."/>
+      <outline type="rss" xmlUrl="http://xkcd.com/rss.xml" htmlUrl="http://xkcd.com/" text="xkcd.com" title="xkcd.com" description="xkcd.com: A webcomic of romance and math humor."/>
+
+      <outline type="rss" xmlUrl="http://eu.blizzard.com/fr-fr/news/rss.xml" htmlUrl="http://www.blizzard.com/" text="Blizzard Entertainment-Dernières nouvelles" title="Blizzard Entertainment-Dernières nouvelles" description="Mises à jour récentes sur Blizzard.com"/>
+
+      <outline type="rss" xmlUrl="http://feeds2.feedburner.com/KorbensBlog-UpgradeYourMind" htmlUrl="http://korben.info/" text="Korben" title="Korben" description="Upgrade your mind"/>
+      <outline type="rss" xmlUrl="http://feeds.feedburner.com/Torrentfreak" htmlUrl="https://torrentfreak.com/" text="TorrentFreak" title="TorrentFreak" description="Breaking File-sharing, Copyright and Privacy News"/>
+
+
+      <outline type="rss" xmlUrl="http://www.judgehype.com/nouvelles.xml" htmlUrl="http://www.judgehype.com/" text="Réseau JudgeHype" title="Réseau JudgeHype" description="Toute l'actualité du réseau JudgeHype"/>
+      <outline type="rss" xmlUrl="http://www.wowhead.com/news&amp;rss" htmlUrl="http://www.wowhead.com/news" text="Wowhead News" title="Wowhead News" description="Wowhead: World of Warcraft Database"/>
+
+  </body>
+</opml>

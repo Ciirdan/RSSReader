@@ -4,6 +4,8 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   before_action :configure_permitted_parameters, if: :devise_controller?
 
+  before_action :init_info
+
   protected
 
   # Use Username or Email for login
@@ -26,12 +28,12 @@ class ApplicationController < ActionController::Base
     super
   end
 
-  def load_feeds
+  def init_info
+    @q = Post.ransack(params[:q])
     if user_signed_in?
       @feeds = current_user.feeds
     else
-      # TODO: Limit for not signed users
-      @feeds = Feed.all
+      @feeds = Feed.where(url: 'http://mercurenews.com/rss')
     end
   end
 
