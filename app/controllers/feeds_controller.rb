@@ -50,15 +50,17 @@ class FeedsController < ApplicationController
       feed.refresh
     end
 
-    redirect_to feeds_path
+    redirect_to root_path
   end
 
+  # TODO file input
   def import
 
     file = File.open('data/leed-03-11-2015.opml')
     contents = file.read
 
     opml = OpmlSaw::Parser.new(contents)
+    # Populate feeds
     opml.parse
 
     opml.feeds.each do |feed|
