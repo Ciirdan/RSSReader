@@ -13,6 +13,7 @@ gem 'opml_saw', :git => "git://github.com/feedbin/opml_saw.git", :branch => "mas
 gem 'ransack'
 
 # DB
+gem 'pg'
 gem 'sqlite3'
 
 # JS & CSS
