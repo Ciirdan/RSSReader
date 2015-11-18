@@ -2,7 +2,12 @@ source 'https://rubygems.org'
 
 # Rails
 gem 'rails', '4.2.3'
-gem 'thin'
+group :production do
+  gem 'puma'
+end
+group :development, :test do
+  gem 'thin'
+end
 
 # Application
 gem 'devise'
