@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20151102151254) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "feeds", force: :cascade do |t|
     t.string   "title"
     t.string   "description"
@@ -33,7 +36,7 @@ ActiveRecord::Schema.define(version: 20151102151254) do
     t.datetime "updated_at",   null: false
   end
 
-  add_index "posts", ["feed_id"], name: "index_posts_on_feed_id"
+  add_index "posts", ["feed_id"], name: "index_posts_on_feed_id", using: :btree
 
   create_table "user_feeds", force: :cascade do |t|
     t.integer  "user_id"
@@ -42,8 +45,8 @@ ActiveRecord::Schema.define(version: 20151102151254) do
     t.datetime "updated_at", null: false
   end
 
-  add_index "user_feeds", ["feed_id"], name: "index_user_feeds_on_feed_id"
-  add_index "user_feeds", ["user_id"], name: "index_user_feeds_on_user_id"
+  add_index "user_feeds", ["feed_id"], name: "index_user_feeds_on_feed_id", using: :btree
+  add_index "user_feeds", ["user_id"], name: "index_user_feeds_on_user_id", using: :btree
 
   create_table "user_posts", force: :cascade do |t|
     t.integer  "user_id"
@@ -54,8 +57,8 @@ ActiveRecord::Schema.define(version: 20151102151254) do
     t.datetime "updated_at",                 null: false
   end
 
-  add_index "user_posts", ["post_id"], name: "index_user_posts_on_post_id"
-  add_index "user_posts", ["user_id"], name: "index_user_posts_on_user_id"
+  add_index "user_posts", ["post_id"], name: "index_user_posts_on_post_id", using: :btree
+  add_index "user_posts", ["user_id"], name: "index_user_posts_on_user_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -74,8 +77,13 @@ ActiveRecord::Schema.define(version: 20151102151254) do
     t.integer  "per_page",               default: 25
   end
 
-  add_index "users", ["email"], name: "index_users_on_email", unique: true
-  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
-  add_index "users", ["username"], name: "index_users_on_username", unique: true
+  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
+  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
+  add_index "users", ["username"], name: "index_users_on_username", unique: true, using: :btree
 
+  add_foreign_key "posts", "feeds"
+  add_foreign_key "user_feeds", "feeds"
+  add_foreign_key "user_feeds", "users"
+  add_foreign_key "user_posts", "posts"
+  add_foreign_key "user_posts", "users"
 end
