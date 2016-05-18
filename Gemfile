@@ -19,9 +19,6 @@ gem 'ransack'
 
 # DB
 gem 'pg'
-group :development, :test do
-  gem 'sqlite3'
-end
 
 # JS & CSS
 gem 'sass-rails'

@@ -112,7 +112,7 @@ class FeedsController < ApplicationController
             flash[:success] = 'Feed added'
           end
             # Rescue & Display error if feed invalid
-        rescue Feedjira::FetchFailure
+        rescue Feedjira::FetchFailure, Feedjira::NoParserAvailable
           flash[:error] = "Invalid Feed #{@feed.url}"
         end
       end

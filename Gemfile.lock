@@ -204,7 +204,6 @@ GEM
       actionpack (>= 3.0)
       activesupport (>= 3.0)
       sprockets (>= 2.8, < 4.0)
-    sqlite3 (1.3.11-x86-mingw32)
     thin (1.6.4)
       daemons (~> 1.0, >= 1.0.9)
       eventmachine (~> 1.0, >= 1.0.4)
@@ -248,7 +247,6 @@ DEPENDENCIES
   rspec-rails
   sass-rails
   simple_form
-  sqlite3
   thin
   tzinfo-data
   uglifier (>= 1.3.0)
