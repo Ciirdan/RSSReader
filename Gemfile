@@ -1,13 +1,12 @@
 source 'https://rubygems.org'
 
 # Rails
-gem 'rails', '4.2.3'
-group :production do
-  gem 'puma'
-end
-group :development, :test do
-  gem 'thin'
-end
+gem 'rails', '4.2.8'
+
+gem 'puma'
+
+#Deployment 
+gem 'dotenv-rails', :groups => [:production]
 
 # Application
 gem 'devise'

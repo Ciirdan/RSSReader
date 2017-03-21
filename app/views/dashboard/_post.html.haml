@@ -13,7 +13,8 @@
     = link_to post.title, post.url, :target => :_blank, :rel => :nofollow
   %h6.articleDetails
     = link_to post.feed.title, post.feed.site_url, :target => :_blank, :rel => :nofollow
-    = "the #{post.published_at.strftime("%d/%m/%Y")} at #{post.published_at.strftime("%H:%M")}"
+    - if post.published_at?
+      = "the #{post.published_at.strftime("%d/%m/%Y")} at #{post.published_at.strftime("%H:%M")}"
 
   .articleContent
     != post.content

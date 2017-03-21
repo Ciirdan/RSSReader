@@ -2,8 +2,8 @@ default: &default
   adapter: postgresql
   pool: 5
   timeout: 5000
-  username: root
-  password: root
+  username: user
+  password: password
 
 development:
   <<: *default
@@ -14,7 +14,6 @@ test:
 
 production:
   <<: *default
-  username: <%= ENV["RSSREADER_DBUSER"] %>
-  password: <%= ENV["RSSREADER_DBPASSWORD"] %>
   adapter: postgresql
   database: rssreader_production
+  #url: <%= ENV['DATABASE_URL'] %>
